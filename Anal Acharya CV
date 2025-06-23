@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMC Remedy Developer CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e5e7eb;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            background-color: #475569;
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 19px;
+            top: 24px;
+            height: calc(100% - 24px);
+            width: 2px;
+            background-color: #d1d5db;
+        }
+        .print-button:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s;
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                padding: 0 !important;
+                margin: 0 !important;
+                background: white !important;
+                color: black !important;
+                font-size: 12px !important;
+            }
+            .container {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+            }
+            h1 { font-size: 1.5rem !important; }
+            h2 { font-size: 1.2rem !important; }
+            h3 { font-size: 1rem !important; }
+            p, li { font-size: 0.9rem !important; }
+            .progress-bar { height: 6px !important; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans print:bg-white">
+    <div class="container mx-auto max-w-5xl my-4 print:my-0 bg-white rounded-lg shadow-lg overflow-hidden print:shadow-none">
+        <!-- Header -->
+        <div class="bg-slate-700 text-white p-6 print:p-4 relative">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div class="flex items-center space-x-6">
+                    <div class="w-24 h-24 rounded-full border-4 border-white overflow-hidden bg-gray-200">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile Photo" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold mb-2">John Doe</h1>
+                        <h2 class="text-xl md:text-2xl font-semibold text-slate-300">Senior BMC Remedy Developer</h2>
+                        <p class="mt-2 text-slate-300">8+ years of experience in BMC Remedy ITSM solutions</p>
+                    </div>
+                </div>
+                <div class="mt-4 md:mt-0 flex items-center space-x-4">
+                    <button onclick="window.print()" class="print-button no-print bg-white text-slate-700 px-4 py-2 rounded-lg font-medium flex items-center">
+                        <i class="fas fa-print mr-2"></i> Print CV
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="p-6 print:p-4 grid grid-cols-1 lg:grid-cols-3 gap-4 print:gap-2">
+            <!-- Left Column -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- Contact -->
+                <div class="bg-gray-50 p-4 print:p-2 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2 text-slate-700 border-b pb-1">Contact</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-teal-600 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <p class="text-gray-600">john.doe@example.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-teal-600 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">Phone</p>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-teal-600 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">Location</p>
+                                <p class="text-gray-600">New York, USA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fab fa-linkedin text-teal-600 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">LinkedIn</p>
+                                <p class="text-gray-600">linkedin.com/in/johndoe</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fab fa-github text-teal-600 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">GitHub</p>
+                                <p class="text-gray-600">github.com/johndoe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2 text-teal-800 border-b pb-1">Technical Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">BMC Remedy ITSM</span>
+                                <span class="text-gray-600">Expert</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">BMC Atrium CMDB</span>
+                                <span class="text-gray-600">Advanced</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Remedy Workflow</span>
+                                <span class="text-gray-600">Expert</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="text-gray-600">Advanced</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">SQL</span>
+                                <span class="text-gray-600">Advanced</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2 text-teal-800 border-b pb-1">Certifications</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-certificate text-teal-600 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">BMC Certified Remedy Developer</p>
+                                <p class="text-gray-600">2021</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-certificate text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">ITIL v4 Foundation</p>
+                                <p class="text-gray-600">2020</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-certificate text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-medium">AWS Certified Developer</p>
+                                <p class="text-gray-600">2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2 text-teal-800 border-b pb-1">Languages</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">English</span>
+                                <span class="text-gray-600">Fluent</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Spanish</span>
+                                <span class="text-gray-600">Intermediate</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Profile -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2 text-teal-800 border-b pb-1">Professional Profile</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Highly skilled BMC Remedy Developer with 8+ years of experience in designing, developing, and implementing BMC Remedy ITSM solutions. Proven expertise in customizing Remedy applications, creating workflows, and integrating with third-party systems. Strong background in ITIL processes and service management best practices. Passionate about creating efficient IT service management solutions that drive business value.
+                    </p>
+                </div>
+
+                <!-- Experience -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2 text-teal-800 border-b pb-1">Work Experience</h3>
+                    <div class="space-y-6">
+                        <!-- Experience 1 -->
+                        <div class="relative pl-10 timeline-item">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center">
+                                <i class="fas fa-briefcase text-slate-600"></i>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                                    <h4 class="text-lg font-bold">Senior BMC Remedy Developer</h4>
+                                    <span class="text-slate-600 font-medium">Jan 2020 - Present</span>
+                                </div>
+                                <p class="text-gray-600 font-medium">Tech Solutions Inc., New York</p>
+                                <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
+                                    <li>Led the migration of BMC Remedy from 8.1 to 9.1 for a Fortune 500 client, reducing incident resolution time by 30%</li>
+                                    <li>Developed custom workflows and forms to automate IT service request processes</li>
+                                    <li>Integrated Remedy with ServiceNow using REST APIs for seamless data synchronization</li>
+                                    <li>Optimized SQL queries and database performance for Remedy applications</li>
+                                    <li>Mentored junior developers on Remedy best practices and development standards</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="relative pl-10 timeline-item">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                <i class="fas fa-briefcase text-blue-600"></i>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                                    <h4 class="text-lg font-bold">BMC Remedy Developer</h4>
+                                    <span class="text-blue-600 font-medium">Jun 2016 - Dec 2019</span>
+                                </div>
+                                <p class="text-gray-600 font-medium">Global IT Services, Boston</p>
+                                <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
+                                    <li>Designed and implemented custom Remedy applications for IT service management</li>
+                                    <li>Created complex workflows for incident, problem, and change management processes</li>
+                                    <li>Developed integration between Remedy and Active Directory for user management</li>
+                                    <li>Participated in requirements gathering and solution design sessions with stakeholders</li>
+                                    <li>Provided production support and troubleshooting for Remedy applications</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Experience 3 -->
+                        <div class="relative pl-10 timeline-item">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                <i class="fas fa-briefcase text-blue-600"></i>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                                    <h4 class="text-lg font-bold">Junior Remedy Developer</h4>
+                                    <span class="text-blue-600 font-medium">Aug 2014 - May 2016</span>
+                                </div>
+                                <p class="text-gray-600 font-medium">IT Solutions Corp., Chicago</p>
+                                <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700">
+                                    <li>Assisted in the development and customization of Remedy forms and workflows</li>
+                                    <li>Performed unit testing and documentation for Remedy applications</li>
+                                    <li>Supported end-users with Remedy-related issues and training</li>
+                                    <li>Participated in the implementation of ITIL processes within Remedy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2 text-teal-800 border-b pb-1">Education</h3>
+                    <div class="relative pl-10">
+                        <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-slate-600"></i>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                                <h4 class="text-lg font-bold">Master of Science in Computer Science</h4>
+                                <span class="text-slate-600 font-medium">2012 - 2014</span>
+                            </div>
+                            <p class="text-gray-600 font-medium">University of Technology, New York</p>
+                            <p class="mt-2 text-gray-700">Specialization in Software Engineering and IT Service Management</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2 text-teal-800 border-b pb-1">Key Projects</h3>
+                    <div class="space-y-4">
+                        <!-- Project 1 -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-bold">ITSM Process Automation</h4>
+                            <p class="text-gray-600 font-medium">Tech Solutions Inc., 2021</p>
+                            <p class="mt-2 text-gray-700">
+                                Designed and implemented automated workflows for IT service management processes including incident, problem, change, and release management. Reduced manual effort by 40% and improved SLA compliance.
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="skill-badge bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm">BMC Remedy</span>
+                                <span class="skill-badge bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm">Workflow</span>
+                                <span class="skill-badge bg-slate-200 text-slate-700 px-3 py-1 rounded-full text-sm">ITIL</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-bold">CMDB Integration Project</h4>
+                            <p class="text-gray-600 font-medium">Global IT Services, 2018</p>
+                            <p class="mt-2 text-gray-700">
+                                Integrated BMC Atrium CMDB with multiple discovery tools to maintain accurate configuration data. Developed reconciliation jobs and custom reports to improve data accuracy by 35%.
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <span class="skill-badge bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">BMC Atrium CMDB</span>
+                                <span class="skill-badge bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">SQL</span>
+                                <span class="skill-badge bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-800 text-white p-2 text-center text-xs print:hidden">
+            <p>© 2023 John Doe - BMC Remedy Developer</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple animation for skills on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+            
+            // Add animation to timeline items
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
